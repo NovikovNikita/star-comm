@@ -36,9 +36,8 @@ public class Bullet {
 
     public void update() {
         position.x += speed;
-        if (position.x < -20) {
-            position.x = 1280 + (float)Math.random() * 300;
-            position.y = (float)Math.random() * 720;
-            }
+        if(position.x > 1280) {
+            destroy();
+        }
     }
 }

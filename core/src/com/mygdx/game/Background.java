@@ -16,9 +16,10 @@ public class Background {
 
         public void update() {
             position.x -= speed;
-            if (position.x < -40) {
-                position.x = 1280 + (float)Math.random() * 300;
+            if(position.x < -20) {
+                position.x = 1280;
                 position.y = (float)Math.random() * 720;
+                speed = 1.0f + (float)Math.random() * 10.0f;
             }
         }
     }
